@@ -1,0 +1,10 @@
+<p>movies-list works!</p>
+<img
+    *ngIf="!movies"
+    src="https://i.stack.imgur.com/kOnzy.gif"
+/>
+<div *ngFor="let movie of movies; let index = index" class="movie-container">
+    <div>{{index}}) {{movie.title}}</div>
+    <div>{{movie.releaseDate}}</div>
+    <div>{{movie.price}}</div>
+</div>
