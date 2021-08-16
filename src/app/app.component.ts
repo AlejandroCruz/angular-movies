@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  moviesInTheaters;
+  moviesFutureReleases;
+  title = 'my angular-movies';
+
   ngOnInit(): void {
       this.moviesInTheaters = [{
         title: 'The Matrix',
@@ -31,7 +35,7 @@ export class AppComponent implements OnInit {
       // }];
   }
 
-  moviesInTheaters;
-  moviesFutureReleases;
-  title = 'my angular-movies';
+  handleRating(rate:number){
+    alert(`The user selected ${rate}`);
+  }
 }
