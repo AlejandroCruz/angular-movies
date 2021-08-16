@@ -8,3 +8,6 @@ form mat-form-field {
 button {
     margin-top: 20px;
 }
+.clear-container {
+    margin-bottom: 1rem;
+}

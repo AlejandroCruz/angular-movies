@@ -8,7 +8,7 @@
     <mat-form-field appearance="outline">
         <mat-label>Genre</mat-label>
         <mat-select formControlName="genreId">
-            <mat-option *ngFor="let genre of genres" [value]="'1'">{{genre.name}}</mat-option>
+            <mat-option *ngFor="let genre of genres" [value]="genre.id">{{genre.name}}</mat-option>
         </mat-select>
     </mat-form-field>
 
@@ -19,7 +19,9 @@
         <mat-checkbox formControlName="inTheaters">In Theaters</mat-checkbox>
     </div>
 
-    <div>
+    <div class="clear-container">
         <button mat-flat-button (click)="clearForm()" color="warn">Clear</button>
     </div>
 </form>
+
+<app-movies-list [movies]="movies"></app-movies-list>
