@@ -8,8 +8,18 @@
     <mat-form-field appearance="outline">
         <mat-label>Genre</mat-label>
         <mat-select formControlName="genreId">
-            <mat-option [value]="'1'">Action</mat-option>
-            <mat-option [value]="'2'">Sci-Fi</mat-option>
+            <mat-option *ngFor="let genre of genres" [value]="'1'">{{genre.name}}</mat-option>
         </mat-select>
     </mat-form-field>
+
+    <div>
+        <mat-checkbox formControlName="upcomingReleases">Upcoming Releases</mat-checkbox>
+    </div>
+    <div>
+        <mat-checkbox formControlName="inTheaters">In Theaters</mat-checkbox>
+    </div>
+
+    <div>
+        <button mat-flat-button (click)="clearForm()" color="warn">Clear</button>
+    </div>
 </form>

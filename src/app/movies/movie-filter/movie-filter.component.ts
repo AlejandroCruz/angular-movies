@@ -12,6 +12,8 @@ export class MovieFilterComponent implements OnInit {
 
   form: FormGroup;
 
+  genres = [{id: 1, name: 'Action'},{id: 2, name: 'Sci-Fi'}]
+
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       title: '',
@@ -21,4 +23,7 @@ export class MovieFilterComponent implements OnInit {
     });
   }
 
+  clearForm(){
+    
+  }
 }
