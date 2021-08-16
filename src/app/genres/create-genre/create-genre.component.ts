@@ -16,7 +16,7 @@ export class CreateGenreComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       name: ['', {
-        validators: [Validators.required]
+        validators: [Validators.required, Validators.minLength(3)]
       }]
     });
   }
@@ -31,6 +31,11 @@ export class CreateGenreComponent implements OnInit {
     if (field.hasError('required')){
       return 'The name field is required'
     }
+
+    if (field.hasError('minlength')){
+      return 'The minimum length is 3';
+    }
+    
     return '';
   }
 }
