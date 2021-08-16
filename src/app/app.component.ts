@@ -7,8 +7,4 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'my angular-movies';
-
-  handleRating(rate:number){
-    alert(`The user selected ${rate}`);
-  }
 }

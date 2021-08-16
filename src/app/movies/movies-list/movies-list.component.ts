@@ -18,4 +18,8 @@ export class MoviesListComponent implements OnInit {
   remove(index:number){
     this.movies.splice(index, 1);
   }
+
+  handleRating(rate:number){
+    alert(`The user selected ${rate}`);
+  }
 }
