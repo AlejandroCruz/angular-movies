@@ -12,4 +12,7 @@ export class CreateGenreComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveChanges(){
+    
+  }
 }
