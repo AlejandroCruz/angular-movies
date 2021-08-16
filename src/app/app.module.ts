@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 import { HomeComponent } from './home/home.component';
 import { IndexGenresComponent } from './genres/index-genres/index-genres.component';
+import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { IndexGenresComponent } from './genres/index-genres/index-genres.compone
     MenuComponent,
     RatingComponent,
     HomeComponent,
-    IndexGenresComponent
+    IndexGenresComponent,
+    CreateGenreComponent
   ],
   imports: [
     BrowserModule,
