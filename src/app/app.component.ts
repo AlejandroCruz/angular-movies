@@ -18,16 +18,17 @@ export class AppComponent implements OnInit {
         price: 11.99
       }];
 
-      this.moviesFutureReleases = [{
-        title: 'Ironman',
-        releaseDate: new Date('2021-01-03'),
-        price: 12.99
-      },
-      {
-        title: 'Star Trek',
-        releaseDate: new Date('2021-01-04'),
-        price: 13.99
-      }];
+      this.moviesFutureReleases = [];
+      // this.moviesFutureReleases = [{
+      //   title: 'Ironman',
+      //   releaseDate: new Date('2021-01-03'),
+      //   price: 12.99
+      // },
+      // {
+      //   title: 'Star Trek',
+      //   releaseDate: new Date('2021-01-04'),
+      //   price: 13.99
+      // }];
   }
 
   moviesInTheaters;

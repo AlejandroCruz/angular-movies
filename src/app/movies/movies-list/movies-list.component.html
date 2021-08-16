@@ -1,15 +1,16 @@
-<img
-    *ngIf="!movies"
-    src="https://i.stack.imgur.com/kOnzy.gif"
-/>
+<app-generic-list [list]="movies">
 
-<p *ngIf="movies?.length === 0">There are no records to display</p>
-
-<div *ngFor="let movie of movies; let index = index" class="movie-container">
-    <div>
-        {{index}}) {{movie.title | uppercase}}
-        <button style="margin-left: 1rem;" (click)="remove(index)">Remove</button>
-    </div>
-    <div>{{movie.releaseDate | date: "dd-MMMM-yyyy"}}</div>
-    <div>{{movie.price | currency}}</div>
-</div>
+    <ng-container content>
+        <div
+            *ngFor="let movie of movies; let index = index"
+            class="movie-container"
+        >
+            <div>
+                {{ index }}) {{ movie.title | uppercase }}
+                <button style="margin-left: 1rem;" (click)="remove(index)">Remove</button>
+            </div>
+            <div>{{ movie.releaseDate | date: "dd-MMMM-yyyy" }}</div>
+            <div>{{ movie.price | currency }}</div>
+        </div>
+    </ng-container>
+</app-generic-list>
