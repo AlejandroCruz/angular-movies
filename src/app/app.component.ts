@@ -22,7 +22,19 @@ export class AppComponent implements OnInit {
         releaseDate: new Date('2021-01-02'),
         price: 11.99,
         poster: 'https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,14,380,562_.jpg'
-      }];  
+      },
+      {
+        title: 'Tron',
+        releaseDate: new Date('2021-01-03'),
+        price: 12.99,
+        poster: 'https://m.media-amazon.com/images/M/MV5BMTk4NTk4MTk1OF5BMl5BanBnXkFtZTcwNTE2MDIwNA@@._V1_QL75_UX380_CR0,0,380,562_.jpg'
+      },
+      {
+        title: 'Dune',
+        releaseDate: new Date('2021-01-03'),
+        price: 12.99,
+        poster: 'https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,1,380,562_.jpg'
+      }];
 
       this.moviesFutureReleases = [];
   }
@@ -31,7 +43,3 @@ export class AppComponent implements OnInit {
     alert(`The user selected ${rate}`);
   }
 }
-/*
-Tron: 'https://m.media-amazon.com/images/M/MV5BMTk4NTk4MTk1OF5BMl5BanBnXkFtZTcwNTE2MDIwNA@@._V1_QL75_UX380_CR0,0,380,562_.jpg'
-300: 'https://m.media-amazon.com/images/M/MV5BNWMxYTZlOTUtZDExMi00YzZmLTkwYTMtZmM2MmRjZmQ3OGY4XkEyXkFqcGdeQXVyMTAwMzUyMzUy._V1_QL75_UY562_CR1,0,380,562_.jpg'
- */
