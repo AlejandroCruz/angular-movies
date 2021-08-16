@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { genreCreationDTO } from '../genre.models';
 
 @Component({
   selector: 'app-create-genre',
@@ -9,33 +10,13 @@ import { Router } from '@angular/router';
 })
 export class CreateGenreComponent implements OnInit {
 
-  constructor(private router: Router, private formBuilder: FormBuilder) { }
-
-  form: FormGroup;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      name: ['', {
-        validators: [Validators.required, Validators.minLength(3)]
-      }]
-    });
   }
 
-  saveChanges(){
+  saveChanges(genreCreationDTO: genreCreationDTO){
+    console.log(genreCreationDTO);
     this.router.navigate(['/genres'])
-  }
-
-  getErrorFieldName(){
-    const field = this.form.get('name');
-    
-    if (field.hasError('required')){
-      return 'The name field is required'
-    }
-
-    if (field.hasError('minlength')){
-      return 'The minimum length is 3';
-    }
-    
-    return '';
   }
 }
