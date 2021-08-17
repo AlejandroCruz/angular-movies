@@ -10,6 +10,10 @@
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+
+    <h4>Actor Bio</h4>
+    <app-input-markdown></app-input-markdown>    
+
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/actor">Cancel</a>
