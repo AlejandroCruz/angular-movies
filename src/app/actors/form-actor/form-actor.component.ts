@@ -22,12 +22,16 @@ export class FormActorComponent implements OnInit {
         validators: [Validators.required]
       }],
       dateOfBirth: ''
-    })
+    })//biography: ''
 
     if(this.model !== undefined){
       this.form.patchValue(this.model);
     }
   }
+
+  // changeMarkdown(content){
+  //   this.form.get('biography').setValue(content);
+  // }
 
   saveChanges(){
     this.onSaveChanges.emit(this.form.value);
