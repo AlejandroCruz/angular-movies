@@ -28,6 +28,7 @@ import { FormGenreComponent } from './genres/form-genre/form-genre.component';
 import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { InputMarkdownComponent } from './utilities/input-markdown/input-markdow
     FormGenreComponent,
     MovieFilterComponent,
     FormActorComponent,
-    InputMarkdownComponent
+    InputMarkdownComponent,
+    FormMovieComponent
   ],
   imports: [
     BrowserModule,
