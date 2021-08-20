@@ -6,7 +6,7 @@
         <div *ngIf="imageBase64">
             <img [src]="imageBase64" alt="image" />
         </div>
-        <div>
+        <div *ngIf="urlCurrentImage">
             <img [src]="urlCurrentImage" alt="image">
         </div>
     </div>

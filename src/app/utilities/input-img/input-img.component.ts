@@ -9,11 +9,11 @@ import { toBase64 } from '../utils';
 })
 export class InputImgComponent implements OnInit {
   imageBase64: string;
-
+  
+  constructor() { }
+  
   @Input() urlCurrentImage: string;
   @Output() onImageSelected = new EventEmitter<File>();
-
-  constructor() { }
 
   ngOnInit(): void {
   }
