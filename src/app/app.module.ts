@@ -30,6 +30,7 @@ import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
 import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { InputImgComponent } from './utilities/input-img/input-img.component';
     FormActorComponent,
     InputMarkdownComponent,
     FormMovieComponent,
-    InputImgComponent
+    InputImgComponent,
+    MultipleSelectorComponent
   ],
   imports: [
     BrowserModule,
