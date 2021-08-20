@@ -20,10 +20,10 @@
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-<!-- 
+
     <h4>Select the Poster</h4>
-    <app-input-img [urlCurrentImage]="model?.poster" (onImageSelected)="onImageSelected($event)">
-    </app-input-img> -->
+    <app-input-img (onImageSelected)="onImageSelected($event)"> <!--[urlCurrentImage]="model?.poster"-->
+    </app-input-img>
 
     <h4>Summary</h4>
     <app-input-markdown [markdownContent]="model?.summary" (changeMarkdown)="changeMarkdown($event)"></app-input-markdown>
