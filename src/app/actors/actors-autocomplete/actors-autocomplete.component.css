@@ -7,3 +7,13 @@ img{
     width: 35px;
     height: 45px;
 }
+table{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+mat-form-field{
+    width: 100%;
+}
+mat-icon{
+    cursor: pointer;
+}
