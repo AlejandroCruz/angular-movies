@@ -31,6 +31,7 @@ import { MovieFilterComponent } from './movies/movie-filter/movie-filter.compone
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 import { RatingComponent } from './utilities/rating/rating.component';
+import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { RatingComponent } from './utilities/rating/rating.component';
     MovieFilterComponent,
     MoviesListComponent,
     MultipleSelectorComponent,
-    RatingComponent
+    RatingComponent,
+    ActorsAutocompleteComponent
   ],
   imports: [
     AppRoutingModule,
