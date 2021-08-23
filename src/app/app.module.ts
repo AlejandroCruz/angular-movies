@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -68,7 +69,8 @@ import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors
     FormsModule,
     MarkdownModule.forRoot(),
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: []
