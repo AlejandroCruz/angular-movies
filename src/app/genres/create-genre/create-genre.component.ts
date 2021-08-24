@@ -11,6 +11,8 @@ import { GenresService } from '../genres.service';
 })
 export class CreateGenreComponent implements OnInit {
 
+  errors: string[] = [];
+
   constructor(private router: Router, private genresService: GenresService) { }
 
   ngOnInit(): void {
