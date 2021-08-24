@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { genreCreationDTO } from '../genre.models';
+import { GenresService } from '../genres.service';
 
 @Component({
   selector: 'app-create-genre',
@@ -10,13 +11,14 @@ import { genreCreationDTO } from '../genre.models';
 })
 export class CreateGenreComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private genresService: GenresService) { }
 
   ngOnInit(): void {
   }
 
   saveChanges(genreCreationDTO: genreCreationDTO){
-    console.log(genreCreationDTO);
-    this.router.navigate(['/genres'])
+    this.genresService.create(genreCreationDTO).subscribe(() => {
+      this.router.navigate(['/genres']);
+    }, error => console.error(error));
   }
 }
