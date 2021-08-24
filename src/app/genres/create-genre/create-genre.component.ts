@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { parseWebAPIErrors } from 'src/app/utilities/utils';
 import { genreCreationDTO } from '../genre.models';
 import { GenresService } from '../genres.service';
 
@@ -21,6 +22,6 @@ export class CreateGenreComponent implements OnInit {
   saveChanges(genreCreationDTO: genreCreationDTO){
     this.genresService.create(genreCreationDTO).subscribe(() => {
       this.router.navigate(['/genres']);
-    }, error => console.error(error));
+    }, error => this.errors = parseWebAPIErrors(error));
   }
 }
