@@ -13,6 +13,7 @@ import {MatNativeDateModule} from '@angular/material/core'
 import {MatTabsModule} from '@angular/material/tabs'
 import {MatAutocompleteModule} from '@angular/material/autocomplete'
 import {MatTableModule} from '@angular/material/table'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import {DragDropModule} from '@angular/cdk/drag-drop'
 
 @NgModule({
@@ -30,7 +31,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop'
     MatTabsModule,
     MatAutocompleteModule,
     MatTableModule,
-    DragDropModule
+    DragDropModule,
+    MatProgressSpinnerModule
   ],
   imports: [
     CommonModule
