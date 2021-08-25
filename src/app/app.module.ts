@@ -1,13 +1,15 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
+import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
 import { CreateActorComponent } from './actors/create-actor/create-actor.component';
 import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 import { CreateMovieComponent } from './movies/create-movie/create-movie.component';
@@ -32,16 +34,17 @@ import { MovieFilterComponent } from './movies/movie-filter/movie-filter.compone
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 import { RatingComponent } from './utilities/rating/rating.component';
-import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
-import {DisplayErrorsComponent} from './utilities/display-errors/display-errors.component'
+import {DisplayErrorsComponent} from './utilities/display-errors/display-errors.component';
 
 @NgModule({
   declarations: [
+    ActorsAutocompleteComponent,
     AppComponent,
     CreateActorComponent,
     CreateGenreComponent,
     CreateMovieComponent,
     CreateMovieTheaterComponent,
+    DisplayErrorsComponent,
     EditActorComponent,
     EditGenreComponent,
     EditMovieComponent,
@@ -60,19 +63,18 @@ import {DisplayErrorsComponent} from './utilities/display-errors/display-errors.
     MovieFilterComponent,
     MoviesListComponent,
     MultipleSelectorComponent,
-    RatingComponent,
-    ActorsAutocompleteComponent,
-    DisplayErrorsComponent
+    RatingComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     MarkdownModule.forRoot(),
     MaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    SweetAlert2Module.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: []

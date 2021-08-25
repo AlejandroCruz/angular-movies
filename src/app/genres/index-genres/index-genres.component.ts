@@ -15,6 +15,7 @@ export class IndexGenresComponent implements OnInit {
   constructor(private genresService: GenresService) { }
 
   ngOnInit(): void {
+    this.loadGenres();
   }
 
   loadGenres(){

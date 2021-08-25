@@ -16,7 +16,14 @@
                     <a routerLink="/genres/edit/{{element.id}}" mat-flat-button color="primary">
                         Edit
                     </a>
-                    <button mat-flat-button color="warn" (click)="delete(element.id)">
+                    <button
+                        mat-flat-button color="warn"
+                        [swal]="{
+                            title: 'Confirmation',
+                            text: 'Please confirm record delete.',
+                            showCancelButton: true
+                        }"
+                        (confirm)="delete(element.id)">
                         Delete
                     </button>
                 </td>
