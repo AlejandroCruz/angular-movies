@@ -15,9 +15,18 @@ export class IndexGenresComponent implements OnInit {
   constructor(private genresService: GenresService) { }
 
   ngOnInit(): void {
+  }
+
+  loadGenres(){
     this.genresService.getAll().subscribe(genres => {
       this.genres = genres;
     });
   }
 
+  delete(id: number){
+    this.genresService.delete(id)
+      .subscribe(() => {
+        this.loadGenres();
+      });
+  }
 }
