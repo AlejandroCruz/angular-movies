@@ -14,7 +14,8 @@ export class EditActorComponent implements OnInit {
   model: ActorDTO = {
     name: "Keanu Reeves",
     dateOfBirth: new Date(),
-    picture: 'https://m.media-amazon.com/images/M/MV5BYTkzODI4MDMtNDNmZC00NDZlLWFmNTktNDRhOWE2YzhlZTQ2XkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_UY317_CR19,0,214,317_AL_.jpg'
+    picture: 'https://m.media-amazon.com/images/M/MV5BYTkzODI4MDMtNDNmZC00NDZlLWFmNTktNDRhOWE2YzhlZTQ2XkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_UY317_CR19,0,214,317_AL_.jpg',
+    biography: ''
   }
 
   ngOnInit(): void {
