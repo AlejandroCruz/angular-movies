@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { MovieDTO } from 'src/app/movies/movies.model';
 import { toBase64 } from '../utils';
 
 @Component({
@@ -26,5 +25,4 @@ export class InputImgComponent implements OnInit {
       this.urlCurrentImage = null;
     }
   }
-
 }
