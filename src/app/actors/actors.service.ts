@@ -14,8 +14,10 @@ export class ActorsService {
   private apiURL = environment.apiURL + '/actors'
 
   create(actor: ActorCreationDTO) {
-    const formData = this.buildFormData(actor);
-    return this.http.post(this.apiURL, formData);
+    const actorData = actor.name = 'My Name';
+    // const formData = this.buildFormData(actor);
+    return this.http.post(this.apiURL, actorData);
+    // return this.http.post(this.apiURL, formData);
   }
 
   private buildFormData(actor: ActorCreationDTO): FormData {
