@@ -11,7 +11,13 @@ export class EditActorComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
-  model: ActorDTO;
+  model: ActorDTO = {
+    id: 1,
+    name: 'Keanu',
+    dateOfBirth: new Date(),
+    biography: 'default value',
+    picture: 'https://m.media-amazon.com/images/M/MV5BYTkzODI4MDMtNDNmZC00NDZlLWFmNTktNDRhOWE2YzhlZTQ2XkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_FMjpg_UX736_.jpg'
+  };
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
