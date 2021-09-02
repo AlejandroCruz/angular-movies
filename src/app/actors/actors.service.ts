@@ -23,9 +23,12 @@ export class ActorsService {
 
     formData.append('name', actor.name);
 
-    // if field is not required verify and then append
     if (actor.biography) {
       formData.append('biography', actor.biography);
+    }
+    else // Workaround for bug in 'input-markdown.component.html'
+    {
+      formData.append('biography', "Dummy-data actor biography");
     }
     if (actor.dateOfBirth) {
       formData.append('dateOfBirth', formatDateFormData(actor.dateOfBirth));
